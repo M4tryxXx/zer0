@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5184d20e.css",
+    "main.js": "/static/js/main.cb86dc6e.js",
+    "static/js/453.15a36238.chunk.js": "/static/js/453.15a36238.chunk.js",
+    "static/media/planner.jpg": "/static/media/planner.9af9c5485f68a7dd81ef.jpg",
+    "static/media/sleeping2.jpg": "/static/media/sleeping2.5995611a420fc9f486e3.jpg",
+    "static/media/shopping-list.jpg": "/static/media/shopping-list.ce855904b4030becd8ec.jpg",
+    "static/media/hygine.jpg": "/static/media/hygine.34e8f6fcef466431eab1.jpg",
+    "static/media/sport.jpg": "/static/media/sport.01da87ccb7525aaf79d2.jpg",
+    "static/media/media.jpg": "/static/media/media.bcde360fd2d1c63b6341.jpg",
+    "static/media/sleeping.jpg": "/static/media/sleeping.4c11138d7c69f041a798.jpg",
+    "static/media/cleaning.jpg": "/static/media/cleaning.8d7744d14ab9a89f6928.jpg",
+    "static/media/gaming.jpg": "/static/media/gaming.7e59697dd74f89bab86c.jpg",
+    "static/media/morning.webp": "/static/media/morning.963b8e37fa16db8a4e1b.webp",
+    "index.html": "/index.html",
+    "main.5184d20e.css.map": "/static/css/main.5184d20e.css.map",
+    "main.cb86dc6e.js.map": "/static/js/main.cb86dc6e.js.map",
+    "453.15a36238.chunk.js.map": "/static/js/453.15a36238.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5184d20e.css",
+    "static/js/main.cb86dc6e.js"
+  ]
+}
