@@ -163,11 +163,19 @@ export default function ShopList() {
           <input
             type="text"
             value={item}
-            placeholder="Item name..."
+            placeholder={
+              lists[listId]
+                ? `Add Item to ${lists[listId].name} list...`
+                : "Select a list first..."
+            }
             onChange={handleChange}
             id="add-item-to-list"
           />
-          <input type="submit" className="submitItem" value="Add to List" />
+          <input
+            type="submit"
+            className="submitItem"
+            value={`Add to ${lists[listId].name} list `}
+          />
         </form>
         <p
           id="errorAddItem"

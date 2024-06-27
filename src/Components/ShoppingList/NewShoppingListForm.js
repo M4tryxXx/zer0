@@ -32,7 +32,11 @@ export default function NewShoppingListForm() {
     let id = uuidv4();
     console.log(id);
     if (!name) {
+      document.getElementById("errorAddItem").style.display = "block";
       return;
+    }
+    if (document.getElementById("errorAddItem").style.display === "block") {
+      document.getElementById("errorAddItem").style.display = "none";
     }
 
     listIds.push(id);
@@ -69,8 +73,19 @@ export default function NewShoppingListForm() {
           id="shop-name"
           value={name}
           onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Numele Listei..."
+          placeholder="Name of shopping list..."
         />
+        <p
+          id="errorAddItem"
+          style={{
+            color: "darkred",
+            textAlign: "center",
+            fontWeight: "bold",
+            display: "none",
+          }}
+        >
+          The form cannot be empty!
+        </p>
 
         <input
           type="submit"

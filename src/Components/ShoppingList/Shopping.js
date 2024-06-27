@@ -35,7 +35,7 @@ export const ShoppingList = () => {
           className="button-option"
           onClick={handleClick}
         >
-          {lists[listsId].name}
+          {`${lists[listsId].name} list`}
         </button>
       );
     });
@@ -43,10 +43,35 @@ export const ShoppingList = () => {
 
   return (
     <div className="shopping-container">
-      <NavLink className="new-shopping-list" to="/newShoppingList">
-        Create new shopping list
-      </NavLink>
-      <div className="option-list">{optionList}</div>
+      {listIds.length === 0 ? (
+        <>
+          <h4>You dont have any shopping lists, Please create one!</h4>
+          <NavLink className="new-shopping-list" to="/newShoppingList">
+            Create new shopping list
+          </NavLink>
+        </>
+      ) : (
+        <NavLink className="new-shopping-list" to="/newShoppingList">
+          Create Another List
+        </NavLink>
+      )}
+      {listIds.length > 0 ? (
+        <>
+          <h4
+            style={{
+              marginBottom: "-10px",
+              fontWeight: "bold",
+              textDecoration: "underline",
+            }}
+          >
+            Your Shopping Lists
+          </h4>
+          <div className="option-list">{optionList}</div>
+        </>
+      ) : (
+        ""
+      )}
+
       <Outlet />
     </div>
   );
