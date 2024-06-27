@@ -33,10 +33,8 @@ export default function NewShoppingListForm() {
     console.log(id);
     if (!name) {
       document.getElementById("errorAddItem").style.display = "block";
+      document.getElementById("shop-name").style.border = "solid 2px red";
       return;
-    }
-    if (document.getElementById("errorAddItem").style.display === "block") {
-      document.getElementById("errorAddItem").style.display = "none";
     }
 
     listIds.push(id);
@@ -72,7 +70,12 @@ export default function NewShoppingListForm() {
           type="text"
           id="shop-name"
           value={name}
-          onChange={(e) => setName(e.currentTarget.value)}
+          onChange={(e) => {
+            setName(e.currentTarget.value);
+            document.getElementById("errorAddItem").style.display = "none";
+            document.getElementById("shop-name").style.border =
+              "solid 1px white";
+          }}
           placeholder="Name of shopping list..."
         />
         <p

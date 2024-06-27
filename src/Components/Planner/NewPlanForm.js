@@ -80,7 +80,7 @@ export default function NewPlannerForm() {
             document.getElementById("planner-name").style.border =
               "solid 1px green";
           }}
-          placeholder="Numele Plannerului..."
+          placeholder="New planner name..."
         />
         <p
           id="errorAddPlan"

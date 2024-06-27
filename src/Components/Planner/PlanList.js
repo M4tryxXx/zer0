@@ -204,7 +204,7 @@ export default function PlanList() {
     });
   };
 
-  console.log(plans[planId]);
+  // console.log(plans[planId]);
 
   return (
     <div className="plans-container">
@@ -213,7 +213,11 @@ export default function PlanList() {
           <input
             type="text"
             value={plan}
-            placeholder="Plan name..."
+            placeholder={
+              plans[planId]
+                ? `Add item to ${plans[planId].name} planner...`
+                : "No planner selected..."
+            }
             onChange={handleChange}
             id="add-plan-to-list"
           />

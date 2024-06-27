@@ -44,10 +44,26 @@ export const PlannerList = () => {
 
   return (
     <div className="planner-container">
-      <NavLink className="new-planner-list" to="/newPlanList">
-        Create new Planner!
-      </NavLink>
-      <div className="option-list">{optionPList}</div>
+      {plansIds.length > 0 ? (
+        <NavLink className="new-planner-list" to="/newPlanList">
+          Create new Planner!
+        </NavLink>
+      ) : (
+        <NavLink className="new-planner-list" to="/newPlanList">
+          Createa a Planner!
+        </NavLink>
+      )}
+      <div className="option-list">
+        {plansIds.length > 0 ? (
+          optionPList
+        ) : (
+          <h4
+            style={{ width: "80%", textAlign: "center", margin: "20px auto" }}
+          >
+            You dont have any planner, create a new planner to start
+          </h4>
+        )}
+      </div>
       <Outlet />
     </div>
   );

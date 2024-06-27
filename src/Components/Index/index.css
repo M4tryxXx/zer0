@@ -40,3 +40,18 @@
 .cards-container h4 {
   margin-top: 5px;
 }
+
+@media screen and (max-width: 500px) {
+  .cards-container a {
+    width: 150px;
+    height: 200px;
+  }
+  .card {
+    width: 95%;
+    height: 80%;
+  }
+  .cards-container h4 {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+}
