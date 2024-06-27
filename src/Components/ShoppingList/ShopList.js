@@ -48,6 +48,11 @@ export default function ShopList() {
   }
   const handleChange = (e) => {
     setItem(e.target.value);
+    document.getElementById("add-item-to-list").style.border =
+      "solid 1px white";
+    if (document.getElementById("errorAddItem").style.display === "block") {
+      document.getElementById("errorAddItem").style.display = "none";
+    }
   };
 
   const handleToggle = (e) => {
@@ -110,6 +115,8 @@ export default function ShopList() {
       localStorage.setItem("shoppingList", JSON.stringify(obj));
     } else {
       document.getElementById("errorAddItem").style.display = "block";
+      document.getElementById("add-item-to-list").style.border =
+        "solid 2px red";
     }
   };
 

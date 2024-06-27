@@ -71,6 +71,11 @@ export default function PlanList() {
 
   const handleChange = (e) => {
     setPlan(e.target.value);
+    document.getElementById("add-plan-to-list").style.border =
+      "solid 1px white";
+    if (document.getElementById("errorAddPlan").style.display === "block") {
+      document.getElementById("errorAddPlan").style.display = "none";
+    }
   };
 
   const handleToggle = (e) => {
@@ -141,6 +146,8 @@ export default function PlanList() {
       localStorage.setItem("planners", JSON.stringify(obj));
     } else {
       document.getElementById("errorAddPlan").style.display = "block";
+      document.getElementById("add-plan-to-list").style.border =
+        "solid 2px red";
     }
     setPlan("");
   };

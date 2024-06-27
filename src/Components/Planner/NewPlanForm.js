@@ -30,6 +30,10 @@ export default function NewPlannerForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name) {
+      document.getElementById("errorAddPlan").style.display = "block";
+      document.getElementById("planner-name").style.border = "solid 2px red";
+    }
     let id = uuidv4();
     if (!name) {
       return;
@@ -70,9 +74,25 @@ export default function NewPlannerForm() {
           type="text"
           id="planner-name"
           value={name}
-          onChange={(e) => setName(e.currentTarget.value)}
+          onChange={(e) => {
+            setName(e.currentTarget.value);
+            document.getElementById("errorAddPlan").style.display = "none";
+            document.getElementById("planner-name").style.border =
+              "solid 1px green";
+          }}
           placeholder="Numele Plannerului..."
         />
+        <p
+          id="errorAddPlan"
+          style={{
+            color: "darkred",
+            textAlign: "center",
+            fontWeight: "bold",
+            display: "none",
+          }}
+        >
+          The form cannot be empty!
+        </p>
         <input
           type="submit"
           className="create-planner"

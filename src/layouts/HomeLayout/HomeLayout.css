@@ -5,11 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(
-    #01510189,
-    rgba(0, 0, 255, 0.439),
-    #01510189
-  );
+  background-image: linear-gradient(#20322089, rgba(4, 4, 4, 0.439), #20322089);
   max-width: 900px;
   margin: auto;
 }
