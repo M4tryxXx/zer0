@@ -1,0 +1,130 @@
+.shopping-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.shopping-container a {
+  -webkit-appearance: none;
+  text-decoration: none;
+  background: rgba(16, 16, 16, 0.735);
+  color: #09efc1;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+.new-shopping-list {
+  -webkit-appearance: none;
+  border-radius: 0;
+  font-size: 1rem;
+  padding: 6px 14px;
+  font-weight: bold;
+  box-shadow: black 2px 1px 10px;
+  border: solid 0.1mm white;
+}
+.submitItem {
+  -webkit-appearance: none;
+  text-decoration: none;
+  background: rgba(16, 16, 16, 0.735);
+  color: rgb(9, 239, 193);
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 20px auto;
+}
+.list-container {
+  width: 100%;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+}
+.list {
+  width: 90%;
+  margin: 10px auto;
+  min-height: 500px;
+  border: 2px solid green;
+  border-radius: 10px;
+  background: rgba(41, 41, 41, 0.424);
+}
+.item {
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  padding: 6px 6px;
+  margin: 10px;
+  font-weight: bold;
+  background-color: rgba(196, 255, 216, 0.909);
+  border-radius: 8px;
+  box-shadow: black 2px 1px 10px;
+}
+.item:first-child,
+.disabledItem:first-child {
+  margin-top: 10px;
+}
+.item:last-child,
+.disabledItem:last-child {
+  margin-bottom: 10px;
+}
+.disabledItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  padding: 6px 6px;
+  margin: 10px;
+  font-weight: bold;
+  background-color: rgba(255, 196, 196, 0.544);
+  border-radius: 8px;
+  color: gray;
+  text-decoration: line-through;
+}
+.disabledItem > .item-delete {
+  background-color: #0234014e;
+  color: rgb(0, 208, 180);
+
+  border: none;
+}
+.item-delete {
+  -webkit-appearance: none;
+  font-size: 1.2rem;
+  padding: 0px 20px;
+  border-radius: 8px;
+  color: #0def09;
+  background-color: rgba(109, 13, 3, 0.735);
+  font-size: bold;
+  box-shadow: black 2px 1px 10px;
+  border: solid 0.1mm rgba(255, 255, 255, 0.667);
+}
+.list-info {
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+}
+.name {
+  margin-left: 10%;
+}
+.list-control {
+  width: 90%;
+  margin: auto;
+}
+.button-control {
+  -webkit-appearance: none;
+  text-decoration: none;
+  background: rgba(16, 16, 16, 0.735);
+  color: rgb(9, 239, 193);
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 20px 10px;
+}
+#add-item-to-list {
+  -webkit-appearance: none;
+  font-size: 1rem;
+  font-size: 1.4rem;
+  box-shadow: black 2px 1px 10px;
+  border: solid 0.1mm white;
+  border-radius: 4px;
+}

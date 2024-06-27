@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  margin: 5px auto;
+}
+.create-shopping-list {
+  -webkit-appearance: none;
+  text-decoration: none;
+  background: rgba(16, 16, 16, 0.735);
+  color: rgb(9, 239, 193);
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 6px;
+  margin: 20px auto;
+  border: solid 0.1mm white;
+  box-shadow: black 2px 1px 10px;
+}
+#shop-name {
+  -webkit-appearance: none;
+  font-size: 1.2rem;
+  box-shadow: black 2px 1px 10px;
+}
